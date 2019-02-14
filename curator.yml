@@ -13,5 +13,5 @@
   become: yes
   tasks:
      - name: "Doing curator Configuration"
-       shell: /home/sharique/curator/automate/curator_init.sh >> /home/sharique/curator/automate/curator_state.log
+       shell: /var/lib/jenkins/workspace/ansible_run/curator_init.sh >> /var/lib/jenkins/workspace/ansible_run/curator_state.log
 
