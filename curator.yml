@@ -1,0 +1,17 @@
+---
+- hosts: vbox-2
+  remote_user: sharique
+  become: yes
+  tasks:
+    - name: "Installing Plugin for S3 Repository"
+      elasticsearch_plugin:
+        name: repository-s3 
+        state: present
+
+- hosts: localhost
+  remote_user: sharique
+  become: yes
+  tasks:
+     - name: "Doing curator Configuration"
+       shell: /home/sharique/curator/automate/curator_init.sh >> /home/sharique/curator/automate/curator_state.log
+
